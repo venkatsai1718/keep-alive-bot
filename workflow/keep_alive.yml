@@ -1,0 +1,25 @@
+name: Keep Alive Bot
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # run every 10 minutes
+  workflow_dispatch:         # allow manual run
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run keep alive script
+        run: python keep_alive.py
