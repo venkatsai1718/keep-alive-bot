@@ -4,8 +4,10 @@ from datetime import datetime
 
 # List of URLs you want to keep alive
 URLS = [
-    "https://your-render-app.onrender.com",
-    "https://your-hf-space.hf.space"
+    "https://movie-recommendation-system-s1ty1.streamlit.app/",
+    "https://huggingface.co/spaces/imsatya/spam-message-classification",
+    "https://car-price-prediction-s1ty1.onrender.com/",
+    "https://ai-image-detection-s1ty1.onrender.com/",
 ]
 
 def keep_alive():
@@ -18,3 +20,4 @@ def keep_alive():
 
 if __name__ == "__main__":
     keep_alive()
+
